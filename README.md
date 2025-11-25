@@ -92,11 +92,6 @@ Edit `config.json` to configure the application:
 - `filename`: Output Excel file name
 - `sheet_name`: Sheet name to update (default: "Features")
 
-### SharePoint Settings (Optional)
-- `site_url`: Your SharePoint site
-- `doc_library`: Document library name
-- `client_id`: Azure AD App Client ID
-- `client_secret`: Azure AD App Client Secret
 
 ## 🔐 Security
 
