@@ -1,0 +1,227 @@
+================================================================================
+                        JIRA EXPORTER PORTABLE
+                              START HERE
+================================================================================
+
+Welcome! This document will guide you to the right instructions.
+
+================================================================================
+                        WHAT DO YOU WANT TO DO?
+================================================================================
+
+[1] BUILD THE PORTABLE APPLICATION ON WINDOWS
+    ↓
+    Read: BUILD_INSTRUCTIONS_WINDOWS.md (Complete detailed guide)
+    OR
+    Read: QUICK_BUILD_GUIDE.txt (Quick reference)
+    OR
+    Follow: BUILD_CHECKLIST.txt (Print and check off each step)
+    OR
+    See: BUILD_FLOWCHART.txt (Visual process flow)
+
+    Commands Summary:
+    - pip install -r requirements.txt
+    - build_portable.bat
+
+
+[2] USE THE PORTABLE APPLICATION (END USERS)
+    ↓
+    Read: README_PORTABLE.txt (User instructions)
+
+    Quick Start:
+    1. Extract ZIP file
+    2. Edit config.json
+    3. Run JiraExporter.exe
+
+
+[3] UNDERSTAND HOW IT WORKS (TECHNICAL)
+    ↓
+    Read: HOW_TO_CREATE_PORTABLE_APP.md (Technical guide)
+    Read: PORTABLE_README.md (Architecture details)
+
+
+[4] DEVELOP / MODIFY THE CODE
+    ↓
+    Edit: jira_exporter_portable.py (Main application)
+    Edit: config.json (Configuration template)
+
+    After changes, rebuild with: build_portable.bat
+
+
+================================================================================
+                        DOCUMENT INDEX
+================================================================================
+
+FOR BUILDERS (YOU):
+-------------------
+★ BUILD_INSTRUCTIONS_WINDOWS.md   - Complete step-by-step Windows guide
+★ QUICK_BUILD_GUIDE.txt            - Quick command reference
+★ BUILD_CHECKLIST.txt              - Printable checklist
+  BUILD_FLOWCHART.txt              - Visual process diagram
+  HOW_TO_CREATE_PORTABLE_APP.md    - Complete technical documentation
+
+
+FOR END USERS:
+--------------
+★ README_PORTABLE.txt              - User instructions (distribute with ZIP)
+★ README.txt                       - Copy of above (in portable_release/)
+
+
+FOR DEVELOPERS:
+---------------
+  jira_exporter_portable.py        - Main application code
+  config.json                      - Configuration file
+  requirements.txt                 - Python dependencies
+  build_portable.bat               - Build script
+
+
+★ = START WITH THESE
+
+
+================================================================================
+                        QUICK START PATHS
+================================================================================
+
+PATH 1: "I want to build this NOW on Windows"
+→ Print BUILD_CHECKLIST.txt
+→ Follow step by step
+→ 30 minutes total
+
+
+PATH 2: "I want to understand everything first"
+→ Read BUILD_INSTRUCTIONS_WINDOWS.md
+→ Read HOW_TO_CREATE_PORTABLE_APP.md
+→ Then build using BUILD_CHECKLIST.txt
+→ 1 hour total
+
+
+PATH 3: "I just need quick commands"
+→ Open QUICK_BUILD_GUIDE.txt
+→ Run the commands
+→ 10 minutes if everything works
+
+
+PATH 4: "I'm distributing to users"
+→ Build using any method above
+→ Include README_PORTABLE.txt with the ZIP
+→ Done!
+
+
+================================================================================
+                        FILE STRUCTURE
+================================================================================
+
+GetJiraTickets/
+│
+├── SOURCE FILES (for building)
+│   ├── jira_exporter_portable.py    (Main app with config.json support)
+│   ├── jira_exporter.py              (Original version)
+│   ├── config.json                   (Configuration template)
+│   ├── requirements.txt              (Python packages needed)
+│   └── build_portable.bat            (Windows build script)
+│
+├── DOCUMENTATION (for you)
+│   ├── START_HERE.txt                (This file)
+│   ├── BUILD_INSTRUCTIONS_WINDOWS.md (Complete guide)
+│   ├── QUICK_BUILD_GUIDE.txt         (Quick reference)
+│   ├── BUILD_CHECKLIST.txt           (Printable checklist)
+│   ├── BUILD_FLOWCHART.txt           (Visual diagram)
+│   ├── HOW_TO_CREATE_PORTABLE_APP.md (Technical details)
+│   └── PORTABLE_README.md            (Architecture)
+│
+├── USER DOCUMENTATION (for distribution)
+│   └── README_PORTABLE.txt           (User instructions)
+│
+└── OUTPUT (created after build)
+    ├── build/                        (Temporary build files)
+    ├── dist/                         (Contains JiraExporter.exe)
+    └── portable_release/             (★ DISTRIBUTE THIS FOLDER ★)
+        ├── JiraExporter.exe          (The portable application)
+        ├── config.json               (User editable config)
+        ├── README.txt                (User instructions)
+        └── jira_export.xlsx          (Template, if exists)
+
+
+================================================================================
+                        RECOMMENDED WORKFLOW
+================================================================================
+
+FIRST TIME:
+1. Transfer project to Windows machine
+2. Open BUILD_CHECKLIST.txt
+3. Follow each step, checking boxes as you go
+4. Test the resulting JiraExporter.exe
+5. Create ZIP file from portable_release folder
+6. Test on another machine to verify
+
+SUBSEQUENT BUILDS:
+1. Make changes to jira_exporter_portable.py or config.json
+2. Run: build_portable.bat
+3. Test JiraExporter.exe
+4. Redistribute if needed
+
+
+================================================================================
+                        SUPPORT & TROUBLESHOOTING
+================================================================================
+
+Common Issues:
+
+1. "pip is not recognized"
+   → Python not in PATH → Reinstall Python with "Add to PATH"
+
+2. Build fails
+   → Check BUILD_INSTRUCTIONS_WINDOWS.md → Troubleshooting section
+
+3. Exe doesn't run
+   → Run from Command Prompt to see error messages
+   → cd portable_release && JiraExporter.exe
+
+4. Need help?
+   → Check BUILD_INSTRUCTIONS_WINDOWS.md
+   → Section: "Common Build Issues & Solutions"
+
+
+================================================================================
+                        WHAT YOU'LL CREATE
+================================================================================
+
+After building, you'll have:
+
+✓ Portable Windows executable (JiraExporter.exe)
+✓ No installation required
+✓ Works without Python
+✓ Works without admin rights
+✓ Single folder to distribute
+✓ Users can customize via config.json
+
+Total time: 30 minutes (first time)
+           10 minutes (subsequent builds)
+
+
+================================================================================
+                        NEXT STEPS
+================================================================================
+
+[ ] Read the appropriate documentation for your needs (see above)
+
+[ ] Transfer project to Windows machine if needed
+
+[ ] Follow the build process
+
+[ ] Test the portable application
+
+[ ] Distribute to users
+
+[ ] Celebrate! 🎉
+
+
+================================================================================
+
+Questions? Start with BUILD_INSTRUCTIONS_WINDOWS.md
+
+Ready to build? Open BUILD_CHECKLIST.txt
+
+Want quick reference? Use QUICK_BUILD_GUIDE.txt
+
+================================================================================

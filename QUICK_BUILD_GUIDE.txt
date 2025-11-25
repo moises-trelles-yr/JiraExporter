@@ -1,0 +1,96 @@
+================================================================================
+                    QUICK BUILD GUIDE - Windows
+                    (Print this for easy reference)
+================================================================================
+
+BEFORE YOU START:
+-----------------
+1. Copy the entire project folder to Windows machine
+2. Place it somewhere like: C:\Users\YourName\Documents\GetJiraTickets
+
+
+STEP 1: INSTALL PYTHON (if needed)
+-----------------------------------
+1. Download from: https://www.python.org/downloads/
+2. Run installer
+3. ✓ CHECK "Add Python to PATH"
+4. Click "Install Now"
+
+Test: Open Command Prompt, type: python --version
+
+
+STEP 2: OPEN COMMAND PROMPT IN PROJECT FOLDER
+----------------------------------------------
+Method 1 (Easy):
+- Open project folder in File Explorer
+- Click address bar, type "cmd", press Enter
+
+Method 2:
+- Press Windows+R
+- Type "cmd"
+- Type: cd C:\Users\YourName\Documents\GetJiraTickets
+
+
+STEP 3: INSTALL PACKAGES
+-------------------------
+Type this command:
+
+    pip install -r requirements.txt
+
+Wait 2-5 minutes for download and installation.
+
+
+STEP 4: BUILD THE PORTABLE APP
+-------------------------------
+Type this command:
+
+    build_portable.bat
+
+Wait 1-3 minutes for build to complete.
+
+
+STEP 5: FIND YOUR PORTABLE PACKAGE
+-----------------------------------
+Look in: portable_release\
+
+You'll find:
+- JiraExporter.exe (this is your portable app!)
+- config.json
+- README.txt
+
+
+STEP 6: TEST IT
+---------------
+1. Edit config.json with your credentials
+2. Double-click JiraExporter.exe
+3. Check if Excel file is created
+
+
+STEP 7: DISTRIBUTE
+------------------
+1. Right-click portable_release folder
+2. Send to → Compressed (zipped) folder
+3. Send ZIP to users!
+
+
+TROUBLESHOOTING:
+----------------
+Q: "pip is not recognized"
+A: Reinstall Python with "Add to PATH" checked
+
+Q: Build fails
+A: Make sure you're in the correct folder (use 'dir' to check)
+
+Q: Exe doesn't run
+A: Run from Command Prompt to see error message
+
+Q: "Access denied"
+A: Run Command Prompt as Administrator
+
+
+THAT'S IT!
+----------
+Users can now run JiraExporter.exe on any Windows machine
+without admin rights and without Python!
+
+================================================================================

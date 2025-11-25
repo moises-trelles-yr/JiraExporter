@@ -1,0 +1,21 @@
+{
+  "jira": {
+    "url": "https://your-company.atlassian.net",
+    "email": "YOUR_EMAIL@company.com",
+    "api_token": "YOUR_JIRA_API_TOKEN_HERE",
+    "jql_query": "filter=XXXXX"
+  },
+  "excel": {
+    "filename": "jira_export.xlsx",
+    "sheet_name": "Features"
+  },
+  "sharepoint": {
+    "site_url": "https://your-company.sharepoint.com/sites/YOURSITE",
+    "doc_library": "Shared Documents",
+    "folder_path": "",
+    "client_id": "",
+    "client_secret": "",
+    "username": "",
+    "password": ""
+  }
+}

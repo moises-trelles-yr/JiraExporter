@@ -1,0 +1,146 @@
+================================================================================
+                    BUILD CHECKLIST - Print & Follow
+================================================================================
+
+PREPARATION
+-----------
+[ ] Transferred project folder to Windows machine
+[ ] Folder location: C:\Users\_________________\GetJiraTickets
+[ ] Can see files: jira_exporter_portable.py, build_portable.bat, config.json
+
+
+PYTHON SETUP
+------------
+[ ] Opened Command Prompt (type "cmd" in Start menu)
+[ ] Typed: python --version
+[ ] Result shows Python 3.x.x (if not, need to install Python)
+
+If Python NOT installed:
+[ ] Downloaded from https://www.python.org/downloads/
+[ ] Ran installer
+[ ] CHECKED "Add Python to PATH" box
+[ ] Installed successfully
+[ ] Closed old Command Prompt, opened new one
+[ ] Typed: python --version → now shows version
+
+
+NAVIGATE TO PROJECT
+-------------------
+[ ] Opened File Explorer
+[ ] Navigated to: C:\Users\_________________\GetJiraTickets
+[ ] Clicked in address bar
+[ ] Typed: cmd
+[ ] Pressed Enter
+[ ] Command Prompt opened in correct folder
+
+
+INSTALL DEPENDENCIES
+--------------------
+[ ] In Command Prompt, typed: pip install -r requirements.txt
+[ ] Pressed Enter
+[ ] Waited for packages to download (2-5 minutes)
+[ ] Saw "Successfully installed..." message
+[ ] No error messages
+
+
+BUILD PORTABLE APP
+------------------
+[ ] In same Command Prompt, typed: build_portable.bat
+[ ] Pressed Enter
+[ ] Watched build process (1-3 minutes)
+[ ] Saw "Build complete!" message
+[ ] Saw "Portable package created in: portable_release\"
+[ ] Pressed any key to close
+
+
+VERIFY BUILD
+------------
+[ ] Opened File Explorer in project folder
+[ ] Found "portable_release" folder
+[ ] Opened portable_release folder
+[ ] Found these files:
+    [ ] JiraExporter.exe (check size: 50-100 MB)
+    [ ] config.json
+    [ ] README.txt
+    [ ] jira_export_20251125.xlsx (if applicable)
+
+
+TEST THE APPLICATION
+--------------------
+[ ] Right-clicked config.json → Open with → Notepad
+[ ] Verified Jira credentials are correct:
+    [ ] url: https://_____________________.atlassian.net
+    [ ] email: _____________________@___________.com
+    [ ] api_token: (long string)
+    [ ] jql_query: filter=______
+[ ] Saved and closed Notepad
+[ ] Double-clicked JiraExporter.exe
+[ ] Console window appeared
+[ ] Saw "Starting Jira Data Extraction..."
+[ ] Saw "Fetched X issues"
+[ ] Saw "Successfully updated sheet..."
+[ ] Saw "Process Completed Successfully!"
+[ ] Pressed Enter to close
+[ ] Found Excel file in folder
+[ ] Opened Excel file
+[ ] Data looks correct
+
+
+PREPARE FOR DISTRIBUTION
+-------------------------
+[ ] Removed sensitive data from config.json (replace with placeholders)
+[ ] Right-clicked portable_release folder
+[ ] Selected "Send to" → "Compressed (zipped) folder"
+[ ] Renamed to: JiraExporter_v1.0.zip
+[ ] Tested ZIP file (extract to temp folder and test exe)
+
+
+DISTRIBUTE TO USERS
+-------------------
+[ ] Sent ZIP file to users via:
+    [ ] Email
+    [ ] SharePoint
+    [ ] Network drive
+    [ ] USB stick
+    [ ] Other: _________________
+
+[ ] Included user instructions (README.txt is in the ZIP)
+
+
+POST-DISTRIBUTION
+-----------------
+[ ] Confirmed with at least one user that it works
+[ ] Documented any issues encountered
+[ ] Saved build for future reference
+
+
+NOTES / ISSUES ENCOUNTERED:
+---------------------------
+_________________________________________________________________________
+
+_________________________________________________________________________
+
+_________________________________________________________________________
+
+_________________________________________________________________________
+
+
+TROUBLESHOOTING USED:
+---------------------
+_________________________________________________________________________
+
+_________________________________________________________________________
+
+_________________________________________________________________________
+
+
+BUILD DATE: ________________    BUILDER: ____________________
+
+BUILD MACHINE: _____________________________________________________
+
+DISTRIBUTION COUNT: _________ users
+
+
+================================================================================
+                            BUILD SUCCESSFUL! ✓
+================================================================================

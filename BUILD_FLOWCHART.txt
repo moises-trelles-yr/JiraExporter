@@ -1,0 +1,133 @@
+================================================================================
+                        BUILD PROCESS FLOWCHART
+================================================================================
+
+START: On Windows Machine
+│
+├─→ [1] Do you have Python installed?
+│    │
+│    ├─→ NO  ──→  Download from python.org
+│    │            │
+│    │            └─→ Run installer (✓ Add to PATH)
+│    │                │
+│    │                └─→ Verify: python --version
+│    │
+│    └─→ YES ──→ Continue to [2]
+│
+│
+├─→ [2] Copy project folder to Windows
+│    │   Example: C:\Users\YourName\Documents\GetJiraTickets
+│    │
+│    └─→ Verify folder contains:
+│         - jira_exporter_portable.py
+│         - build_portable.bat
+│         - config.json
+│         - requirements.txt
+│
+│
+├─→ [3] Open Command Prompt in project folder
+│    │
+│    ├─→ Method 1: File Explorer → address bar → type "cmd"
+│    │
+│    └─→ Method 2: Win+R → cmd → cd C:\path\to\project
+│
+│
+├─→ [4] Install Python packages
+│    │
+│    │   Command: pip install -r requirements.txt
+│    │
+│    ├─→ Downloading packages... (2-5 min)
+│    │
+│    └─→ Success? ──→ YES ──→ Continue to [5]
+│         │
+│         └─→ NO ──→ Troubleshoot:
+│                     - Check internet connection
+│                     - Run as administrator
+│                     - Check pip is installed
+│
+│
+├─→ [5] Build portable application
+│    │
+│    │   Command: build_portable.bat
+│    │
+│    ├─→ Cleaning old builds...
+│    ├─→ Running PyInstaller... (1-3 min)
+│    ├─→ Creating portable_release folder...
+│    ├─→ Copying files...
+│    │
+│    └─→ Success? ──→ YES ──→ Continue to [6]
+│         │
+│         └─→ NO ──→ Troubleshoot:
+│                     - Check all files present
+│                     - Try manual build
+│                     - Check disk space
+│
+│
+├─→ [6] Verify portable_release folder created
+│    │
+│    │   portable_release\
+│    │   ├── JiraExporter.exe (50-100 MB)
+│    │   ├── config.json
+│    │   ├── README.txt
+│    │   └── jira_export.xlsx
+│    │
+│    └─→ All files present? ──→ YES ──→ Continue to [7]
+│         │
+│         └─→ NO ──→ Check build_portable.bat for errors
+│
+│
+├─→ [7] Test the application
+│    │
+│    ├─→ Edit config.json (add credentials)
+│    │
+│    ├─→ Run: JiraExporter.exe
+│    │
+│    ├─→ Check console output
+│    │
+│    ├─→ Verify Excel file created
+│    │
+│    └─→ Works correctly? ──→ YES ──→ Continue to [8]
+│         │
+│         └─→ NO ──→ Troubleshoot:
+│                     - Check config.json syntax
+│                     - Verify Jira credentials
+│                     - Run from Command Prompt to see errors
+│
+│
+└─→ [8] Distribute to users
+     │
+     ├─→ Create ZIP file
+     │    - Right-click portable_release
+     │    - Send to → Compressed folder
+     │    - Rename: JiraExporter_v1.0.zip
+     │
+     ├─→ Distribute via:
+     │    - Email
+     │    - SharePoint
+     │    - Network drive
+     │    - USB stick
+     │
+     └─→ Include user instructions (README.txt)
+
+================================================================================
+
+SUCCESS! 🎉
+
+You now have a portable Windows application that:
+✓ Runs without admin rights
+✓ Doesn't require Python installation
+✓ Can be distributed as a simple ZIP file
+✓ Users can customize via config.json
+
+================================================================================
+
+QUICK COMMAND REFERENCE:
+------------------------
+Navigate to folder:    cd C:\path\to\folder
+Check Python:          python --version
+Install packages:      pip install -r requirements.txt
+Build app:             build_portable.bat
+Test build:            cd portable_release && JiraExporter.exe
+Clean build:           rmdir /s /q build dist
+
+================================================================================
